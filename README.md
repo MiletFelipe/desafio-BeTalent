@@ -28,6 +28,7 @@ Certifique-se de ter os seguintes requisitos instalados em sua máquina:
    git clone https://github.com/MiletFelipe/desafio-BeTalent.git
 
 2. **Instale as dependências:** :
+    ```bash
     cd seu diretório
     composer install
 
