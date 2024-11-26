@@ -29,7 +29,6 @@ Certifique-se de ter os seguintes requisitos instalados em sua máquina:
 
 2. **Instale as dependências:** :
     ```bash
-    cd seu diretório
     composer install
 
 3. **Lembre de configurar seu Banco de Dados no .env**
