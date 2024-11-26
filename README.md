@@ -43,12 +43,15 @@ Certifique-se de ter os seguintes requisitos instalados em sua máquina:
     ```
 
 4. **Gere seu token JWT e confira no .env se gerou**
+    ```bash
     php artisan jwt:secret
 
 5. **Rode as migrations**
+    ```bash
     php artisan migrate
 
 6. **Rode a seed**
+    ```bash
     php artisan db:seed
     
 ## Arquivo Insomnia
