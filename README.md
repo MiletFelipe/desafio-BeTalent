@@ -33,12 +33,14 @@ Certifique-se de ter os seguintes requisitos instalados em sua máquina:
 
 3. **Lembre de configurar seu Banco de Dados no .env**
     Exemplo:
-    ``` DB_CONNECTION=mysql ```
-    ``` DB_HOST=127.0.0.1 ```
-    ``` DB_PORT=3306 ```
-    ``` DB_DATABASE=nome_do_banco ```
-    ``` DB_USERNAME=usuario_do_banco ```
-    ``` DB_PASSWORD=senha_do_banco ```
+    ```
+        DB_CONNECTION=mysql 
+        DB_HOST=127.0.0.1 
+        DB_PORT=3306 
+        DB_DATABASE=nome_do_banco 
+        DB_USERNAME=usuario_do_banco 
+        DB_PASSWORD=senha_do_banco 
+    ```
 
 4. **Gere seu token JWT e confira no .env se gerou**
     php artisan jwt:secret
