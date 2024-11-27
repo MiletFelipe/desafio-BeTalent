@@ -36,5 +36,32 @@ class UserController extends Controller
         return response()->json($users);
     }
 
+    /**
+     * Deleta um usuário existente.
+     *
+     * Este método realiza a exclusão lógica de um usuário do banco de dados.
+     * Em caso de sucesso, retorna uma mensagem confirmando a exclusão.
+     * Em caso de erro, retorna uma mensagem de erro.
+     *
+     * @param \App\Models\User $user O usuário a ser deletado.
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function destroy(User $user) : JsonResponse {
+        DB::beginTransaction();
+        try {
+            $user->delete();
+            DB::commit();
+            return response()->json([
+                'message' => 'Usuário deletado com sucesso!'
+            ], 200);
+
+        } catch (Exception $e) {
+
+            DB::rollBack();
+            return response()->json([
+                'message' => 'Erro ao deletar o usuário: ' . $e->getMessage()
+            ], 400);
+        }
+    }
 
 }
