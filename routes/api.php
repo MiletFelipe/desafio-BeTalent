@@ -16,7 +16,7 @@ Route::delete('/user/{user}', [UserController::class, 'destroy']); // DELETE - h
 
 // Rota para registar venda protegida com JWT
 Route::middleware(['jwt.auth'])->group(function () {
-    Route::post('client/{client}/sales', [SaleController::class, 'store']); // - POST - http://127.0.0.1:8000/api/client/1/sales
+    Route::post('sales/{client}/{product}', [SaleController::class, 'store']); // - POST - http://127.0.0.1:8000/api/sales/1/1
 });
 
 // Rotas de Clientes protegidas com JWT

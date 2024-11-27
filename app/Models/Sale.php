@@ -13,7 +13,9 @@ class Sale extends Model
     // Definindo o campo 'client_id' como chave estrangeira
     protected $fillable = [
         'client_id',
-        'amount',
+        'product_id',
+        'quantity',
+        'price',
         'sale_date'
     ];
 
@@ -22,5 +24,10 @@ class Sale extends Model
     public function client()
     {
         return $this->belongsTo(Client::class);
+    }
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
     }
 }
