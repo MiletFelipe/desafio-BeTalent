@@ -97,4 +97,4 @@ Registrar um novo usuário.
 
 ### **Vendas**
 
-- **POST** `/sales/{client}/{product}` - Registrar uma venda para um cliente.
+- **POST** `/sales/{client}/{product}` - Registrar uma venda de um produto para um cliente.
